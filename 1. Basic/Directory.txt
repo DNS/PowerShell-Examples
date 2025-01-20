@@ -10,6 +10,7 @@ Get-ChildItem [[-Path] <string[]>] [[-Filter] <string>] [-Include <string[]>]
 
 # Get list directory content
 Get-ChildItem
+gci
 dir
 ls
 
