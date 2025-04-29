@@ -178,6 +178,7 @@ Test-Path variable:global:foo
 # reverse array
 $a = 4, 8, 7, 1, 3
 [array]::Reverse($a)
+$a
 
 # sort array
 $a = 4, 8, 7, 1, 3
