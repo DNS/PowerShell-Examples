@@ -35,7 +35,16 @@ Write-Output $var1
 
 =====================
 
-# Array Fixed Size
+# Array Fixed Size #1
+$a = [int[]]::new(30)
+
+# Array Fixed Size, dynamic data types #1
+$b = [object[]]::new(30)
+$a = @(11, 22, 33)
+[array]::Copy($a, $b, $a.Length)
+$b
+
+# Array Fixed Size, dynamic data types #2
 [Array] -> [System.Array]
 $a = [Array] @(1,2,3)
 $a = @(1,2,3)
@@ -78,13 +87,14 @@ $a = @(0) * 4
 
 # Copy Array, method #1
 $a = @(11, 22, 33)
-$b = @()
-$b = $b + $a
+$b = @() + $a
+$a[0] = 777
 $b
 
 # Copy Array, method #2
 $a = @(11, 22, 33)
 $b = $a | % { $_ }
+$a[0] = 777
 $b
 
 ===============================

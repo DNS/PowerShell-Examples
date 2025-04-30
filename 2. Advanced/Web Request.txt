@@ -38,7 +38,7 @@ $a = Invoke-WebRequest -Uri 'http://example.com/test.cgi' -Method Post -ContentT
 Note the lack of $ on session - that command creates a variable with the given name. After that command, you have a $ss variable, which you can then pass as the -WebSession in all subsequent requests.
 
 # Socks5 Proxy
-$result = Invoke-WebRequest -Uri 'http://example.com/' -Proxy "socks5://127.0.0.1:8000"
+$result = Invoke-WebRequest -Uri 'http://example.com/' -Proxy 'socks5://127.0.0.1:8000'
 
 # User Agent
 Invoke-WebRequest -Uri 'http://example.com/' -UserAgent 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:123.0) Gecko/20100101 Firefox/123.0'
