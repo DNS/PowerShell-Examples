@@ -7,6 +7,11 @@
 -INotMatch
 -CNotMatch
 
+-Contains
+-IContains
+-NotContains
+-INotContains
+
 $s -Match ''
 
 $s -Replace '',''		# doesn't modify $s
