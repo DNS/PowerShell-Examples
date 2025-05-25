@@ -1,4 +1,5 @@
 ﻿
+# Matching
 -Match		# case insensitive
 -IMatch		# case insensitive
 -CMatch		# case sensitive
@@ -6,6 +7,11 @@
 -NotMatch
 -INotMatch
 -CNotMatch
+
+# Replacement
+-Replace
+-IReplace
+-CReplace
 
 -Contains
 -IContains
