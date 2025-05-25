@@ -1,4 +1,14 @@
 ﻿
+
+# Equality
+-eq, -ieq, -ceq - equals
+-ne, -ine, -cne - not equals
+-gt, -igt, -cgt - greater than
+-ge, -ige, -cge - greater than or equal
+-lt, -ilt, -clt - less than
+-le, -ile, -cle - less than or equal
+
+
 # Matching
 -Match		# case insensitive
 -IMatch		# case insensitive
@@ -13,10 +23,15 @@
 -IReplace
 -CReplace
 
+# Containment
 -Contains
 -IContains
 -NotContains
 -INotContains
+
+# Type
+-Is
+-IsNot
 
 $s -Match ''
 
