@@ -1,4 +1,4 @@
-
+﻿
 # String Interpolation #1
 $(...) $(...)
 Write-Output "Value: $( $a / 100 ) $( $b + 500) kilograms"
@@ -10,4 +10,8 @@ Write-Output ${env:CommonProgramFiles(x86)}
 
 ${variable with spaces} = 123
 Write-Output "Value: ${variable with spaces}"
+
+
+# String Interpolation #3
+'Hello {0}' -f 'World'
 
