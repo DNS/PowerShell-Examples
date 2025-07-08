@@ -1,14 +1,14 @@
-Get-History
+﻿Get-History
 Invoke-History 	
 Add-History
 Clear-History
 
-# enable drop-down history completition
+# enable drop-down history completion, [F2]
 Set-PSReadLineOption -PredictionViewStyle ListView
 
 [EDIT] $PROFILE file to make it permanent.
 
-# enable inline history completition
+# enable inline history completition, [F2]
 Set-PSReadLineOption -PredictionViewStyle InlineView
 
 
