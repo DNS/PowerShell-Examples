@@ -1,8 +1,24 @@
 
 try {
-
+	Get-Content test.txt
 } catch {
+	# catch only catches terminating errors, this will not get executed
+	# some ‘errors’ may be non-terminating errors and these do not get caught.
+	Write-Output 'Catch Error'
+} finally {
+	Write-Output 'Finally Error'
+}
 
+
+
+
+try {
+	Get-Content test.txt -ErrorAction Break
+} catch {
+	# `-ErrorAction Break` will caught error
+	Write-Output 'Catch Error'
+} finally {
+	Write-Output 'Finally Error'
 }
 
 ------------------------
@@ -15,5 +31,6 @@ $ErrorActionPreference = 'SilentlyContinue'
 Invoke-WebRequest -Uri "http://localhost/" -ErrorAction SilentlyContinue -SkipHttpErrorCheck
 
 Invoke-RestMethod -Uri "http://localhost/" -ErrorAction SilentlyContinue -SkipHttpErrorCheck
+
 
 
