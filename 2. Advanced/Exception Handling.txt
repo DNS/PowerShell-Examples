@@ -13,9 +13,9 @@ try {
 
 
 try {
-	Get-Content test.txt -ErrorAction Break
+	Get-Content test.txt -ErrorAction Stop
 } catch {
-	# `-ErrorAction Break` will caught error
+	# `-ErrorAction Stop` will caught error
 	Write-Output 'Catch Error'
 } finally {
 	Write-Output 'Finally Error'
@@ -31,6 +31,7 @@ $ErrorActionPreference = 'SilentlyContinue'
 Invoke-WebRequest -Uri "http://localhost/" -ErrorAction SilentlyContinue -SkipHttpErrorCheck
 
 Invoke-RestMethod -Uri "http://localhost/" -ErrorAction SilentlyContinue -SkipHttpErrorCheck
+
 
 
 
