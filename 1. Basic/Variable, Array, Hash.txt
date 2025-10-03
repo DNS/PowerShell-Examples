@@ -38,7 +38,7 @@ Write-Output $var1
 # Array Fixed Size #1
 $a = [int[]]::new(30)
 
-# Array Fixed Size, dynamic data types #1
+# Array Fixed Size, dynamic data types #1, copy array
 $b = [object[]]::new(30)
 $a = @(11, 22, 33)
 [array]::Copy($a, $b, $a.Length)
@@ -217,6 +217,7 @@ $hash.Add("Name", @("John", "Alice"))
 $hash.Add("Age", @(30, 25))
 
 $hash
+
 
 
 
