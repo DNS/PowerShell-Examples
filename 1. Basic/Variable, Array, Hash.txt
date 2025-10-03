@@ -67,6 +67,15 @@ $a.Length
 
 $a
 
+
+
+# Array Dynamic Size
+$a = @()
+$a += 'hello'
+$a += 'world'
+$a
+
+
 # ArrayList Dynamic Size
 [Collections.ArrayList] -> [System.Collections.ArrayList]		
 $DynamicArray = [System.Collections.ArrayList] @()
@@ -208,6 +217,7 @@ $hash.Add("Name", @("John", "Alice"))
 $hash.Add("Age", @(30, 25))
 
 $hash
+
 
 
 
