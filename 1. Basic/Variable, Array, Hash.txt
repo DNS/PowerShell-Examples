@@ -11,11 +11,36 @@ $Global:var2 = "hello"
 # access variable that can be accessed within script
 $Script:var2 = "world"
 
-# access variable that can be accessed within class
+# access variable that can only be accessed within class
 $Private:var3 = "world"
 
-function Global:func1 { ... }
 
+
+class MyClass {
+    [string] $var4
+    [string] $private:var5
+
+    MyClass([string] $arg1) {
+        $this.var4 = 'From Public ' + $arg1
+        $this.var5 = 'From Private'
+    }
+
+    [string] GetPublicProperty() {
+        return $this.var4
+    }
+
+    [string] GetPrivateVariable() {
+        return $this.var5
+    }
+}
+
+$myObject = [MyClass]::new("OK")
+$myObject.var4
+$myObject.var5
+$myObject.GetPrivateVariable()
+
+# create global function
+function Global:func1 { ... }
 
 
 
@@ -240,6 +265,7 @@ $hash.Add("Name", @("John", "Alice"))
 $hash.Add("Age", @(30, 25))
 
 $hash
+
 
 
 
