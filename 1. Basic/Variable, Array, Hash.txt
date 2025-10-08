@@ -93,13 +93,28 @@ $DynamicArray = [Collections.ArrayList] @()
 $DynamicArray.Add(111)
 
 
-# Nested Arrays
-$data = @( @(1,2,3), @(4,5,6), @(7,8,9) )
-
-
 # initialize with 0
 $a = [int[]]::new(4)
 $a = @(0) * 4
+
+
+# Nested 2D Arrays #1
+$data = @( @(1,2,3), @(4,5,6), @(7,8,9) )
+$d[0]
+$d[1][2]
+
+
+# Nested 2D Array #2
+$b1 = New-Object 'int[,]' 4, 4
+$b2 = [int[,]]::new(4, 4)
+
+$b1[2,2] = 222
+$b2[3,3] = 333
+$b1
+$b2
+
+
+
 
 
 ===============================
@@ -216,8 +231,6 @@ $a | Sort-Object -Descending
 $a | Sort-Object -Unique
 
 
-
-
 ===============================
 
 # dictionary 
@@ -227,6 +240,7 @@ $hash.Add("Name", @("John", "Alice"))
 $hash.Add("Age", @(30, 25))
 
 $hash
+
 
 
 
