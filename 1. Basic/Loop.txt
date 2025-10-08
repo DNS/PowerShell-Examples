@@ -25,6 +25,13 @@ while ($val -ne 3) {
 }
 
 
+
+# 2 variable initializer for loop
+for ($($i=0; $j=0); $($i -lt 3 -and $j -lt 5); $($i++; $j++)) {
+    Write-Output "i: $i, j: $j"
+}
+
+
 ----------------------------
 
 # continue & break
@@ -63,4 +70,5 @@ foreach ($i in $input) { Write-Output $i }
 
 > example #2
 @(123, 456) | %{ Write-Output $input }
+
 
