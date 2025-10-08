@@ -13,5 +13,7 @@ Write-Output "Value: ${variable with spaces}"
 
 
 # String Interpolation #3
-'Hello {0}' -f 'World'
+$a = 'World'
+'Hello {0}' -f $a
+"Hello {0}" -f $a
 
