@@ -3,6 +3,7 @@
 
 # Execute string
 Invoke-Expression
+iex
 
 ----------------
 
@@ -15,6 +16,7 @@ included, verify that the path is correct and try again.
 
 PS> Invoke-Expression "1+1"
 2
+
 
 
 
