@@ -1,9 +1,22 @@
 
-function MyFunc([Type] $Param1, [Type] $Param2) {
-  # Instructions
+function MyFunc([string] $arg1, [string] $arg2) {
+	# Instructions
 }
 
 MyFunc value1 value2
+MyFunc -arg1 value1 -arg2 value2
+
+
+#####################################
+
+
+function MyFunc() {
+	param( [string] $arg1, [string] $arg2 )
+	# Instructions
+}
+
+MyFunc value1 value2
+MyFunc -arg1 value1 -arg2 value2
 
 #####################################
 
@@ -54,6 +67,7 @@ $b
 )
   Write-Host($a $b)
 }
+
 
 
 
