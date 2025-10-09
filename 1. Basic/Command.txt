@@ -1,0 +1,34 @@
+Get-Command
+gcm
+
+--------------------
+
+# get executable path
+gcm *firefox*  | select Source
+$(gcm *firefox*).Source 
+
+--------------------
+
+# get all available CmdLet
+Get-Command -Type Cmdlet
+
+# get all available alias
+Get-Command -Type Alias
+Get-Alias
+
+# get all available functions
+Get-Command -Type Function
+
+# get all available scripts
+Get-Command -Type ExternalScript
+
+# get all available applications
+Get-Command -Type Application
+
+
+
+
+
+
+
+
