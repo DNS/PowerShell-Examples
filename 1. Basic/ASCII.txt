@@ -4,9 +4,10 @@
 
 # print all ascii characters
 foreach ($i in 0..255) {
-    Write-Host "$i`: $([char] $i)"
+	Write-Host "$i`: $([char] $i)"
 }
 
 
 0..255 | %{ Write-Host $( [char] $_ ) -NoNewLine }
+
 
