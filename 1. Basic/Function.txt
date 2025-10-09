@@ -58,15 +58,21 @@ function func_variable_length ($array) {
 }
 
 func_variable_length 1, 2, 3
+func_variable_length @(1, 2, 3)
+
 ##################################### 
 
+
+# Function with mandatory argument
 function TestFunc {
-  Param(
-[Parameter(Mandatory)]$a, 
-$b
-)
-  Write-Host($a $b)
+	Param(
+		[Parameter(Mandatory)] $a = 'empty argument $a', 
+		$b = 'empty argument $b'
+	)
+
+	Write-Output "$a $b"
 }
+
 
 
 
