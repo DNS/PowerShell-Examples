@@ -51,6 +51,11 @@ Get-Content test.txt | select -Last 2
 Get-ChildItem * -File | Select-Object -Property Name, FullName
 
 
+----------------------
+
+# find value 3 in array
+3 -in 1..10
+
 
 
 
