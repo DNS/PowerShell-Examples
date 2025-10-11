@@ -14,20 +14,40 @@
 -lt
 
 -like
+-ilike
+-clike
+
 -match
+-imatch
+-cmatch
+
 -replace
+-ireplace
+-creplace
+
 -split
+-isplit
+-csplit
+
 -join
+
 -contains
+-icontains
+-ccontains
+
 -in
+-cin
+
 -is
+-isnot
+
 -as
 
 -notmatch
 -notlike
 -notcontains
 -notin
--isnot
+
 
 
 
@@ -77,10 +97,29 @@ Static member operator ::
 
 
 
+------------------
 
+# EXAMPLE:
 
+# find a value in array, return true/false
+3 -in 1..10
+'a' -in 'a' .. 'z'
 
+# checks whether an object is a specified .NET type and returns true/false
+'a' -is [string]
 
+# attempts to cast an object to a specified .NET type. 
+# If the conversion succeeds, it returns the cast value; otherwise it returns $null instead of throwing an error.
+$a = '42.555'
+$a -as [int]
 
+# simple matching
+'abc' -like 'abc'
+'abc' -like 'xyz'
 
+# simple regex matching
+'abc' -match 'b'
+'abc' -match 'z'
 
+# check contain value in array
+@('abc', 'xyz') -contains 'abc'
