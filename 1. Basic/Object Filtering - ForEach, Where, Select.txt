@@ -53,8 +53,9 @@ Get-ChildItem * -File | Select-Object -Property Name, FullName
 
 ----------------------
 
-# find value 3 in array
+# find value 3 in array, return true/false
 3 -in 1..10
+
 
 
 
