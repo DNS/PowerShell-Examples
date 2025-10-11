@@ -83,7 +83,7 @@ function test {
 }
 test
 
-# to avoid use Write-Host or Out-Null or > $null
+# to avoid function return caused by Write-Output, then use Write-Host or Out-Null or > $null
 function test {
 	Write-Host 'abc'
 	Write-Output 'abc' | Out-Null
@@ -91,6 +91,7 @@ function test {
 	return $true
 }
 test
+
 
 
 
