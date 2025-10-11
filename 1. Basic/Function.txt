@@ -74,6 +74,23 @@ function TestFunc {
 }
 
 
+#####################################
+
+# stdout can cause function to return it's value
+function test {
+	Write-Output 'abc'
+	return $true
+}
+test
+
+# to avoid use Write-Host or Out-Null or > $null
+function test {
+	Write-Host 'abc'
+	Write-Output 'abc' | Out-Null
+	Write-Output 'abc' > $null
+	return $true
+}
+test
 
 
 
