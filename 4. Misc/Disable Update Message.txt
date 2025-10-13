@@ -1,16 +1,17 @@
 # Set ENV variable
 # System Properties > Environment Variables
-# or $PSHOME\profile.ps1
+# or [EDIT] $PROFILE
 POWERSHELL_UPDATECHECK = Off
 POWERSHELL_TELEMETRY_OPTOUT = 1
 
 # or in linux
 # [EDIT] /etc/environment
-# or $PSHOME\profile.ps1
+# or [EDIT] $PROFILE
 POWERSHELL_UPDATECHECK="Off"
 POWERSHELL_TELEMETRY_OPTOUT=1
 
 then reboot
+
 
 
 
