@@ -1,16 +1,17 @@
-# suppress output, error
-Remove-Item *.abc 2>&1 | Out-Null
-
+# suppress std error
+Remove-Item not-found.abc 2>&1 | Out-Null
+Remove-Item not-found.abc -ErrorAction Ignore
 
 # only supress std error
-Remove-Item *.abc 2>$null
+Remove-Item not-found.abc 2>$null
 
 
 
 
 $out = yt-dlp -f 17 https://www.youtube.com/watch?v=DxIqELaTI7s 2>&1
 
-
+# redirect stdout/stderr to variable $out
 yt-dlp -f 17 https://www.youtube.com/watch?v=DxIqELaTI7s 2>&1 | Tee-Object -Variable out 
 $out
+
 
