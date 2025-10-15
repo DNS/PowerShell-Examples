@@ -1,18 +1,32 @@
 ﻿
 # STDOUT
-'Hello World'
-12345
 Write-Output 'Hello World'
+'Hello World'
+"Hello World"
+12345
+
 Write-Host 'Hello World'
+
+$Host.UI.Write('Hello World')
+$Host.UI.WriteLine('Hello World')
+
+[Console]::Write('Hello World')
+[Console]::WriteLine('Hello World')
 
 Write-Output 'भवचक्र'
 Write-Output 'ダイスキ'
 Write-Output 'لا شيء واقع مطلق بل كل ممكن'
 
-"hello world"
-"Nothing is true, everything is permitted."
-'Laa shay'a waqi'un mutlaq bale kouloun moumkin.'
+# Differences:
+Write-Output		return value to variable or in function
+Write-Host			doesn't return value
+$Host.UI.Write()	doesn't return value
+[Console]::Write()	doesn't return value
 
+$a = Write-Output 'Hello World'
+$a
+
+# STDOUT block string
 @"
 hello
 world
@@ -68,6 +82,7 @@ Write-Host 'CYAN ' -NoNewline -ForegroundColor Cyan
 Write-Host 'RED ' -NoNewline -ForegroundColor Red
 Write-Host 'YELLOW ' -NoNewline -ForegroundColor Yellow
 Write-Host 'BLUE ' -NoNewline -ForegroundColor Blue
+
 
 
 
