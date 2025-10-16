@@ -63,7 +63,7 @@ func_variable_length @(1, 2, 3)
 ##################################### 
 
 
-# Function with mandatory argument
+# Function with mandatory argument & default value $b
 function TestFunc {
 	Param(
 		[Parameter(Mandatory)] $a = 'empty argument $a', 
@@ -93,5 +93,18 @@ function test {
 test
 
 
+#########################################
+
+## Function difference between:
+function ($a) {}
+function { param ($a) }
+
+# function ($a) {}
+Parameter declaration: Implicit, limited to positional $args
+Ability to set types/defaults/validation: No	
+
+# function { param($a) }
+Parameter declaration: Explicit param() block, full syntax
+Ability to set types/defaults/validation: Yes
 
 
