@@ -5,3 +5,15 @@ $b
 $b.Value = 999
 $a
 $b
+
+--------------------------
+# pass by reference in function
+function test {
+	param ([ref] $c)
+	$c.Value = 222
+}
+
+[ref] $d = 111
+$d
+test $d
+$d
