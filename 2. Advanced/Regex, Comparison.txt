@@ -59,6 +59,14 @@ $string | Select-String '(a)' -AllMatches | % Matches | % {$_.Groups[1].Value}
 PowerShell's -Match only returns first match. You have to use Select-String with -AllMatches parameter or [regex]::Matches
 
 
+--------------
+# Get Capture Value
+$Matches[1]
+
+# Capture Group with defined 'label'
+'Name: John Doe' -match '(?msi)name\: (?<mylabel>.+)'
+$Matches['mylabel']
+
 -------------------
 
 # .NET Regex
@@ -72,7 +80,9 @@ $m = [regex]::Replace($text, $pattern, $replacement)
 $m.Groups
 $m.Value
 
+# Get Capture Value
 $m | %{ $_.Groups[1].Value }
+
 
 
 
