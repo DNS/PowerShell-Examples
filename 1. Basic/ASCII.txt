@@ -11,3 +11,6 @@ foreach ($i in 0..255) {
 0..255 | %{ Write-Host $( [char] $_ ) -NoNewLine }
 
 
+# convert char to int
+$ascii = [int][char] 'A'
+$ascii   # → 65
