@@ -17,5 +17,6 @@ $IsLinux
 [Environment]::OSVersion.Platform
 
 [Environment]::UserName
-MachineName
+[Environment]::MachineName
+
 
