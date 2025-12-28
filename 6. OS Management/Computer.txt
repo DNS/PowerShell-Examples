@@ -9,4 +9,13 @@ Clear-RecycleBin
 
 Get-Uptime
 
+# check pwsh version
+$PSVersionTable
+
+# check OS
+$IsLinux
+[Environment]::OSVersion.Platform
+
+[Environment]::UserName
+MachineName
 
