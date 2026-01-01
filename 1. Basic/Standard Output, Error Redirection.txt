@@ -5,13 +5,10 @@ Remove-Item not-found.abc -ErrorAction Ignore
 # only supress std error
 Remove-Item not-found.abc 2>$null
 
+# redirect stdout/stderr to variable $var1, suppress output to terminal
+yt-dlp -f 17 https://www.youtube.com/watch?v=DxIqELaTI7s 2>&1 | Tee-Object -Variable var1 | Out-Null
+$var1
 
-
-
-$out = yt-dlp -f 17 https://www.youtube.com/watch?v=DxIqELaTI7s 2>&1
-
-# redirect stdout/stderr to variable $out
-yt-dlp -f 17 https://www.youtube.com/watch?v=DxIqELaTI7s 2>&1 | Tee-Object -Variable out 
-$out
-
-
+# redirect stdout/stderr to variable $var2, suppress output to terminal
+$var2 = yt-dlp -F https://www.youtube.com/watch?v=DxIqELaTI7s 2>&1
+$var2
