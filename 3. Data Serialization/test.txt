@@ -1,2 +1,3 @@
-﻿ダイスキ from PowerShell
+PowerShell
+ダイスキ
 لا شيء صحيح؛ كل شيء مسموح
