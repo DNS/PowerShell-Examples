@@ -1,0 +1,34 @@
+# XML reader
+@'
+<?xml version="1.0"?>
+<employees>
+  <employee>
+    <name>John Doe</name>
+    <position>Manager</position>
+  </employee>
+  <employee>
+    <name>Jane Smith</name>
+    <position>Developer</position>
+  </employee>
+</employees>
+'@ | Out-File test.xml
+
+
+$a = gc test.xml
+$b = [xml] $a
+$b.employees
+$b.employees.employee
+
+
+-------------------
+
+# XML writer
+$obj = [PSCustomObject]@{
+    Name = "John Doe"
+    Age  = 30
+    City = "New York"
+}
+
+$obj
+$obj | ConvertTo-CliXml
+
