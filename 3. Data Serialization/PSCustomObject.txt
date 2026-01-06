@@ -18,9 +18,12 @@ $a = @(
 $b | Add-Member -NotePropertyName 'name 111' -NotePropertyValue 'value 555'
 $b | Add-Member -MemberType NoteProperty -Name 'name 222' -Value 'value 888'
 
+
+# nice print (windows only)
 $a | Out-GridView -Title 'My Title'
 $a | Select-Object -Property 'col2' | Out-GridView -Title 'My Title'
 $a | Select-Object -Property 'col2', 'col1' | Out-GridView -Title 'My Title'
+
 
 
 
