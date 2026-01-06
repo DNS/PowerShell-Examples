@@ -1,0 +1,6 @@
+$PSVersionTable
+
+# alternate print
+$PSVersionTable.GetEnumerator() | % { '{0} = {1}' -f $_.Key, $_.Value }
+
+
