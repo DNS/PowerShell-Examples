@@ -3,7 +3,7 @@
 [cmdletbinding( DefaultParametersetName='None' )]
 Param(
 	[Parameter(Mandatory=$true)] [String] $Argument1 = 'default value',
-	[Parameter(Mandatory=$false)] [ValidateSet("Install", "Delete", "Check")] $Argument2
+	[Parameter(Mandatory=$false)] [ValidateSet("Install", "Delete", "Check")] $Argument2,
 	[Int] $Argument3
 )
 
@@ -53,6 +53,7 @@ Function DoStuff(){
 		write-host "arg2 missing... exiting or whatever"
 	}
 }
+
 
 
 
