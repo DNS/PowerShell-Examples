@@ -1,7 +1,17 @@
 Get-Job
 Get-Job | Stop-Job
 Get-Job | Remove-Job
+Receive-Job
 
+# example
+$a = Start-Job { $i=0; while($true){Start-Sleep 1; "count: $($i)"; $i++ } }
+Start-Sleep 2
+Receive-Job $a
+Start-Sleep 3
+Receive-Job $a
+
+# wait job to complete
+Wait-Job $a
 
 ------------------------------
 
@@ -44,6 +54,7 @@ Get-Job
 Start-Job { Start-Sleep 10000 }
 Get-Job | Stop-Job
 Get-Job | Remove-Job
+
 
 
 
