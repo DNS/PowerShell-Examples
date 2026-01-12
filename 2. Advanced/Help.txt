@@ -1,0 +1,26 @@
+
+<#
+.SYNOPSIS
+	Test123 Synopsis
+.DESCRIPTION
+	Test123 Description
+.PARAMETER Path
+	The path to the .
+.PARAMETER LiteralPath
+	Specifies a path to one or more locations. Unlike Path, the value of 
+	LiteralPath is used exactly as it is typed. No characters are interpreted 
+	as wildcards. If the path includes escape characters, enclose it in single
+	quotation marks. Single quotation marks tell Windows PowerShell not to 
+	interpret any characters as escape sequences.
+#>
+function Test123 {
+	Param(
+		[String] $Targets = "Help"   #The targets to run.
+	)
+
+	Write-Output 'From Test123'
+}
+
+
+# How to show help?
+Get-Help Test123
