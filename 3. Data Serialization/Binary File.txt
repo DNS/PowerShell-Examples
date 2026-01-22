@@ -6,7 +6,11 @@ Get-Content -ReadCount 512 -AsByteStream .\original.jpg | Add-Content -AsByteStr
 Get-Content -ReadCount 512 -AsByteStream .\original1.jpg, .\original2.jpg | Set-Content -AsByteStream .\clone.jpg
 
 
+-------------------
 
+# Write Byte[] directly to file using Invoke-WebRequest
+$a = Invoke-WebRequest http://localhost/file.gif
+[System.IO.File]::WriteAllBytes('file.gif', $a.Content)
 
 
 
