@@ -8,7 +8,7 @@ $a = Get-Content -Path 111.jpg -AsByteStream
 
 # File Concatenate
 Get-Content test.txt -ReadCount 0 -AsByteStream | Write-Host
-Get-Content 111.jpg -ReadCount 0 -AsByteStream | Set-Content 222.jpg -AsByteStream
+Get-Content input.jpg -ReadCount 0 -AsByteStream | Set-Content output.jpg -AsByteStream
 
 Get-Content -AsByteStream .\original.bin | Add-Content -AsByteStream .\appended-file.bin
 Get-Content 1.txt, 2.txt | Add-Content 3.txt -NoNewline
@@ -19,4 +19,5 @@ The default ReadCount value, 1, reads one byte
 in each read operation and converts each byte into a separate 
 object, which causes errors when you use the Set-Content cmdlet 
 to write the bytes to a file unless you use AsByteStream parameter.
+
 
