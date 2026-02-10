@@ -1,23 +1,32 @@
 
+# Parallel
+1..10 | % -Parallel { $_; Start-Sleep 5 }
 
-# default value -ThrottleLimit is 5
+# $using to use variable outside scope
+$var1 = 'hello world'
+1..10 | % -Parallel { $using:var1 + ": $_" }
 
-1..10 | % -ThrottleLimit 4 -Parallel { $_ }
 
-ForEach-Object -ThrottleLimit 4 -Parallel {
-    # this will be your file
+# default value for -ThrottleLimit is 5
+1..10 | % -Parallel { $_; Start-Sleep 5 }
+1..10 | % -ThrottleLimit 5 -Parallel { $_; Start-Sleep 5 }
+
+
+ForEach-Object -ThrottleLimit 5 -Parallel {
+	# this will be your file
 } 
 
-ForEach-Object -InputObject (1..10) -ThrottleLimit 4 -Parallel { $_ }
+ForEach-Object -InputObject (1..10) -ThrottleLimit 5 -Parallel { $_ }
 
-@Array | ForEach-Object -ThrottleLimit 4 -Parallel { $_ }
+@Array | ForEach-Object -ThrottleLimit 5 -Parallel { $_ }
 
 
 
 
 Measure-Command {
-	ForEach-Object -InputObject (1..10000) -ThrottleLimit 4 -Parallel { Start-Sleep 1 }
+	ForEach-Object -InputObject (1..10000) -ThrottleLimit 5 -Parallel { Start-Sleep 1 }
 }
+
 
 
 
