@@ -1,8 +1,10 @@
-
 $lambda = {
 	Write-Output $args
 }
 
-
 $lambda.Invoke(1,2,3)
 
+
+$a = 'world'
+$b = { "hello $a" }
+& $b
