@@ -1,10 +1,5 @@
-$lambda = {
-	Write-Output $args
-}
-
-$lambda.Invoke(1,2,3)
-
-
+# lambda / closure
 $a = 'world'
-$b = { "hello $a" }
-& $b
+$b = { "hello $a`: $args" }
+& $b 'John Smith'
+$b.Invoke('John Smith')
