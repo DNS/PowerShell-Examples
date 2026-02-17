@@ -1,18 +1,21 @@
 ﻿
-# accessing "Script/Global/Local/Private" variable
+# set "Script/Global/Local/Private" variable
 
-# access local variable
+# set local variable
 $Local:var1 = "hello"
 $var1 = "hello"
 
-# access global variable that can be accessed within function
+# set global variable that can be accessed within function
 $Global:var2 = "hello"
 
-# access variable that can be accessed within script
+# set variable that can be accessed within script
 $Script:var2 = "world"
 
-# access variable that can only be accessed within class
+# set variable that can only be accessed within class
 $Private:var3 = "world"
+
+# set $var4 variable
+New-Variable var4 -Value "hello"
 
 
 
@@ -265,6 +268,7 @@ $hash.Add("Name", @("John", "Alice"))
 $hash.Add("Age", @(30, 25))
 
 $hash
+
 
 
 
