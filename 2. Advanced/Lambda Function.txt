@@ -1,5 +1,19 @@
-# lambda / closure
+# lambda / anonymous function / closure, #1
 $a = 'world'
 $b = { "hello $a`: $args" }
 & $b 'John Smith'
 $b.Invoke('John Smith')
+
+#####################
+
+# lambda / anonymous function / closure, #2
+$a = 'world'
+$b = {
+    param($name)
+    "hello $a`: $name"
+}
+& $b 'John Smith'
+$b.Invoke('John Smith')
+
+
+
