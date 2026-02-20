@@ -107,14 +107,14 @@ $a
 
 --------------------------
 
-# Array Dynamic Size
+# Array Dynamic Size, without method available
 $a = @()
 $a += 'hello'
 $a += 'world'
 $a
 
 
-# ArrayList Dynamic Size
+# ArrayList Dynamic Size, with .Add() method
 [Collections.ArrayList] -> [System.Collections.ArrayList]		
 $DynamicArray = [System.Collections.ArrayList] @()
 $DynamicArray = [Collections.ArrayList] @()
@@ -268,6 +268,7 @@ $hash.Add("Name", @("John", "Alice"))
 $hash.Add("Age", @(30, 25))
 
 $hash
+
 
 
 
