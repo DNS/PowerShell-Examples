@@ -1,4 +1,4 @@
-
+# information about the current command
 $MyInvocation
 
 ---------------------------------
@@ -25,5 +25,6 @@ Since $input is an enumerator, accessing any of its properties causes $input to 
 
 # to reuse $input, copy $input into another array
 $array = $input | % { $_ }
+
 
 
