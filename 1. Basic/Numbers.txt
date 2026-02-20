@@ -1,0 +1,18 @@
+# exponential notation
+5E+2
+1.2E3
+1.2E+3
+1.2e+3
+
+7E-2
+5.6E-3
+5.6e-3
+
+
+# byte
+1kb
+2KB
+3MB
+4GB
+5TB
+6PB
