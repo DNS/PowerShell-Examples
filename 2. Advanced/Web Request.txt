@@ -54,6 +54,22 @@ Invoke-WebRequest -Uri 'http://example.com/' -Headers @{'Referer'= 'http://examp
 $r = Invoke-RestMethod -Uri "https://hypestat.com/api/E9asC1KOutzPrlALHn34X/example.com"
 ($r.data | Get-Member -MemberType Properties).Name
 
+---------------------------
+
+# Download file
+
+# fast
+Invoke-WebRequest -Uri 'http://localhost/test.exe' -OutFile 'test0.exe'
+
+# [System.IO.File]::WriteAllBytes(), fast
+$a = Invoke-WebRequest -Uri 'http://localhost/test.exe'
+[System.IO.File]::WriteAllBytes('test1.exe', $a.Content)
+
+# Set-Content (works but slower)
+$a.Content | Set-Content -Path 'test2.exe' -AsByteStream
+
+# > (works but slower, slightly faster than Set-Content)
+$a.Content > test2.exe
 
 
 
