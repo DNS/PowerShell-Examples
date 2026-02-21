@@ -61,15 +61,16 @@ $r = Invoke-RestMethod -Uri "https://hypestat.com/api/E9asC1KOutzPrlALHn34X/exam
 # fast
 Invoke-WebRequest -Uri 'http://localhost/test.exe' -OutFile 'test0.exe'
 
-# [System.IO.File]::WriteAllBytes(), fast
+# fast
 $a = Invoke-WebRequest -Uri 'http://localhost/test.exe'
 [System.IO.File]::WriteAllBytes('test1.exe', $a.Content)
 
-# Set-Content (works but slower)
+# works but slower
 $a.Content | Set-Content -Path 'test2.exe' -AsByteStream
 
-# > (works but slower, slightly faster than Set-Content)
-$a.Content > test2.exe
+# doesn't works, output is not binary
+$a.Content > test3.exe
+
 
 
 
