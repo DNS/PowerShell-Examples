@@ -72,5 +72,11 @@ $a.Content | Set-Content -Path 'test2.exe' -AsByteStream
 $a.Content > test3.exe
 
 
+---------------------------
+
+# get file name
+Split-Path -Path 'http://localhost/test.exe' -Leaf
+
+
 
 
