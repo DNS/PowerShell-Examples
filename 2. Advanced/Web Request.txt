@@ -27,6 +27,7 @@ hash table.
 # Show only .Content
 Invoke-WebRequest https://google.com/ | % Content
 Invoke-WebRequest https://google.com/ | % { $_.Content }
+$(Invoke-WebRequest https://google.com/).Content
 
 # Cookies
 $result = Invoke-WebRequest -Uri 'http://example.com/' -SessionVariable ss
@@ -76,6 +77,7 @@ $a.Content > test3.exe
 
 # get file name
 Split-Path -Path 'http://localhost/test.exe' -Leaf
+
 
 
 
