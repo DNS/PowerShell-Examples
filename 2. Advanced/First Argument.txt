@@ -1,5 +1,7 @@
 
--InputObject 
+# First Argument
+
+Example: ForEach-Object -InputObject <arguments>
 
 -InputObject is, by convention, a generic parameter name for what should 
 be considered to be pipeline input.
@@ -28,4 +30,7 @@ $b | ForEach-Object { Write-Host "Start $_ End" }
 For the vast majority of cmdlets, direct use of the -InputObject parameter 
 is indeed pointless.
 
+# Example:
+Write-Output -InputObject $b
+$b | Write-Output
 
