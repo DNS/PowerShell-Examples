@@ -1,3 +1,5 @@
+# embed C# to PowerShell script
+
 Add-Type @"
 namespace MyNamespace
 {
@@ -12,4 +14,5 @@ namespace MyNamespace
 "@
 
 [MyNamespace.MyProgram]::MyMethod('Hello World!')
+
 
