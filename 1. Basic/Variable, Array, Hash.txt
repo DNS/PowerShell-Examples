@@ -64,12 +64,17 @@ abc"def
 123'456
 '@
 
+# escape
 $quote1 = "ab`"cd'ef"
 $quote2 = 'ab"cd''ef'
 
+$a = 'file'
+Write-Output "${a}name.txt"
 
 Set-Variable -Name $var1 -Value (0x5555)
 Write-Output $var1
+
+
 
 =====================
 
@@ -268,6 +273,7 @@ $hash.Add("Name", @("John", "Alice"))
 $hash.Add("Age", @(30, 25))
 
 $hash
+
 
 
 
