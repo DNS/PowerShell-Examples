@@ -1,4 +1,7 @@
-# embed C# to PowerShell script
+<#
+    embed C# to PowerShell script
+    C# code will be faster than PowerShell code
+#>
 
 Add-Type @"
 namespace MyNamespace
@@ -14,5 +17,6 @@ namespace MyNamespace
 "@
 
 [MyNamespace.MyProgram]::MyMethod('Hello World!')
+
 
 
