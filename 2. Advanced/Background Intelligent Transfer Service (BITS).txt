@@ -1,4 +1,4 @@
-; Background Intelligent Transfer Service (BITS)
+; Background Intelligent Transfer Service (BITS), Windows-only
 ; To schedule download/upload file, better than Invoke-WebRequest/wget
 ; cons: can't download local files (localhost) while the network state is offline
 
@@ -31,6 +31,7 @@ Suspend-BitsTransfer
 
 ; resume suspended jobs
 Resume-BitsTransfer
+
 
 
 
