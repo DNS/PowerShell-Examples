@@ -1,5 +1,5 @@
 
-# First Argument/Parameter
+# Cmdlet/Function First Argument/Parameter
 
 -InputObject is, by convention, a generic parameter name for what should 
 be considered to be pipeline input.
@@ -43,6 +43,7 @@ function Function1 {
 
 Function1 -Arg1 $a
 $a | Function1
+
 
 
 
