@@ -19,4 +19,17 @@ namespace MyNamespace
 [MyNamespace.MyProgram]::MyMethod('Hello World!')
 
 
+######################################3
+
+<#
+Not working!
+
+Add-Type -TypeDefinition @"
+using System;
+Console.WriteLine("hello world");
+"@ -Language CSharp
+#>
+
+
+
 
