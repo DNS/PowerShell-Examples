@@ -32,6 +32,39 @@ Float Double
 #>
 
 
+
+
+---------------------------------
+
+# Adding a parameter to a script with no value
+
+function Do-Magic {
+	[CmdletBinding(SupportsShouldProcess=$true)]
+	[Alias('magic')]
+	
+	Param(
+		[Switch] $SkipRabbitTrick
+	)
+	
+	Begin {}
+	
+	Process {
+		if($SkipRabbitTrick){
+			"Performance without Rabbit"
+		} else {
+			"Taking Rabbit out of Hat"
+		}
+	}
+	
+	End{}
+}
+
+Do-Magic
+Do-Magic -SkipRabbitTrick
+
+
+
+
 ---------------------------------
 
 # FUNCTION ARGUMENT
@@ -53,6 +86,7 @@ Function DoStuff(){
 		write-host "arg2 missing... exiting or whatever"
 	}
 }
+
 
 
 
