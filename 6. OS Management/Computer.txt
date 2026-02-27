@@ -13,10 +13,12 @@ Get-Uptime
 $PSVersionTable
 
 # check OS
+$IsWindows
 $IsLinux
 [Environment]::OSVersion.Platform
 
 [Environment]::UserName
 [Environment]::MachineName
+
 
 
