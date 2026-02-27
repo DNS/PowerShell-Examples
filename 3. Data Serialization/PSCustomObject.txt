@@ -20,15 +20,17 @@ $b = [PSCustomObject] @{}
 $b | Add-Member -NotePropertyName 'name 111' -NotePropertyValue 'value 555'
 $b | Add-Member -MemberType NoteProperty -Name 'name 222' -Value 'value 888'
 
-# add row dynamically
-$objects = @(
-    [PSCustomObject]@{ Name = 'John'; Age = 30 }
-    [PSCustomObject]@{ Name = 'Mary'; Age = 25 }
-)
+# add row dynamically, ArrayList Dynamic Size, with .Add() method
+$c = [Collections.ArrayList] @()
+$c.Add( [PSCustomObject]@{ Name = 'Obito'; Age = 25 } )
+$c.Add( [PSCustomObject]@{ Name = 'Rin'; Age = 24 } )
+$c
 
-$newObject = [PSCustomObject]@{ Name = 'David'; Age = 40 }
-$objects += $newObject
-$objects
+# add row dynamically using += operator
+$d = @()
+$d += [PSCustomObject]@{ Name = 'Obito'; Age = 25 }
+$d += [PSCustomObject]@{ Name = 'Rin'; Age = 24 }
+$d
 
 
 
@@ -36,6 +38,7 @@ $objects
 $a | Out-GridView -Title 'My Title'
 $a | Select-Object -Property 'col2' | Out-GridView -Title 'My Title'
 $a | Select-Object -Property 'col2', 'col1' | Out-GridView -Title 'My Title'
+
 
 
 
