@@ -18,9 +18,15 @@ $Script
 $Script:MyInvocation.MyCommand
 $MyInvocation.MyCommand
 
+
+# script path
+$script_path = Split-Path $MyInvocation.MyCommand.Path -Parent
+$script_path
+
 # running script full path
 $Script:MyInvocation.InvocationName
 $MyInvocation.InvocationName
+
 
 ---------------
 # user environment directory
@@ -44,4 +50,5 @@ $env:COMPUTERNAME
 
 # add new ENV path
 $env:Path += ';C:\mypath'
+
 
