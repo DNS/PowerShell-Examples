@@ -56,7 +56,7 @@ function Do-Magic {
 		}
 	}
 	
-	End{}
+	End {}
 }
 
 Do-Magic
@@ -86,6 +86,7 @@ Function DoStuff(){
 		write-host "arg2 missing... exiting or whatever"
 	}
 }
+
 
 
 
