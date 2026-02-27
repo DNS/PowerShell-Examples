@@ -20,19 +20,19 @@ New-Variable var4 -Value "hello"
 
 
 class MyClass {
-    [string] $var4
-    [string] $private:var5
+    [String] $var4
+    [String] $private:var5
 
-    MyClass([string] $arg1) {
+    MyClass([String] $arg1) {
         $this.var4 = 'From Public ' + $arg1
         $this.var5 = 'From Private'
     }
 
-    [string] GetPublicProperty() {
+    [String] GetPublicProperty() {
         return $this.var4
     }
 
-    [string] GetPrivateVariable() {
+    [String] GetPrivateVariable() {
         return $this.var5
     }
 }
@@ -79,12 +79,12 @@ Write-Output $var1
 =====================
 
 # Array Fixed Size #1
-$a = [int[]]::new(30)
+$a = [Int[]]::new(30)
 
 # Array Fixed Size, dynamic data types #1, copy array
-$b = [object[]]::new(30)
+$b = [Object[]]::new(30)
 $a = @(11, 22, 33)
-[array]::Copy($a, $b, $a.Length)
+[Array]::Copy($a, $b, $a.Length)
 $b
 
 # Array Fixed Size, dynamic data types #2
@@ -195,13 +195,13 @@ foreach ($i in $h.GetEnumerator()) { $i.Name + ' : ' + $i.Value }
 
 
 # ConvertFrom-StringData to Hash Table
-$string = @"
+$String = @"
 Msg1 = Type "Windows".
 Msg2 = She said, "Hello, World."
 Msg3 = Enter an alias (or "nickname").
 "@
 
-$c = ConvertFrom-StringData $string
+$c = ConvertFrom-StringData $String
 
 ------------------------------------
 
@@ -267,12 +267,13 @@ $a | Sort-Object -Unique
 ===============================
 
 # dictionary 
-$hash = [System.Collections.Generic.Dictionary[string, object[]]]::new()
+$hash = [System.Collections.Generic.Dictionary[String, object[]]]::new()
 
 $hash.Add("Name", @("John", "Alice"))
 $hash.Add("Age", @(30, 25))
 
 $hash
+
 
 
 
