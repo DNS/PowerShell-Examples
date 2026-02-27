@@ -61,6 +61,7 @@ function Do-Magic {
 
 Do-Magic
 Do-Magic -SkipRabbitTrick
+magic -SkipRabbitTrick
 
 
 
@@ -69,23 +70,27 @@ Do-Magic -SkipRabbitTrick
 
 # FUNCTION ARGUMENT
 
-Function DoStuff(){
+Function DoStuff {
 	param(
-		[Parameter(Mandatory=$true)][string]$computername,
-		[Parameter(Mandatory=$false)][string]$arg2,
-		[Parameter(Mandatory=$false)][string]$domain
+		[Parameter(Mandatory=$true)] [string] $computername,
+		[Parameter(Mandatory=$false)] [string] $arg2,
+		[Parameter(Mandatory=$false)] [string] $domain
 	)
-	if(!($domain)){
+	
+	if(-not $domain){
 		$domain = 'domain1'
 	}
-	write-host $domain
-	if($arg2){
-		write-host "arg2 present... executing script block"
+	
+	$domain
+	
+	if ($arg2){
+		"arg2 present... executing script block"
 	}
 	else{
-		write-host "arg2 missing... exiting or whatever"
+		"arg2 missing... exiting or whatever"
 	}
 }
+
 
 
 
