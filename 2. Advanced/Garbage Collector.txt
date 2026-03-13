@@ -1,0 +1,12 @@
+Remove-Variable is a cmdlet that permanently deletes a variable from the current PowerShell session. 
+Unlike Clear-Variable, which resets a variable’s value but retains its existence.
+
+$var1 = Get-Content 'large-files.txt' -Raw
+$var2 = Get-Content 'large-files.txt' -Raw
+
+# can use wildcard character
+Clear-Variable -Name var1
+Remove-Variable -Name var* -Scope Global
+
+# Force .NET garbage collection to free up unused memory
+[System.GC]::Collect()
