@@ -15,7 +15,7 @@ Format-Volume -DriveLetter X -FileSystem NTFS -Compress
 Format-Volume -DriveLetter X -FileSystem exFAT
 
 # Full wipe and then format
-Format-Volume -DriveLetter X -FileSystem NTFS -Compress -Full -Force
+Format-Volume -DriveLetter X -FileSystem NTFS -Compress -Full
 
 --------------------------------
 # DRIVE LETTER
