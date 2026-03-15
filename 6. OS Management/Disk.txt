@@ -1,2 +1,24 @@
 Get-Command | Select-String 'disk|volume|partition'
 
+Get-Disk
+Get-Partition
+Get-Volume
+
+-----------------------------
+# FORMAT DRIVE
+
+# Get available drive
+Get-Volume
+
+# Quick format
+Format-Volume -DriveLetter X -FileSystem NTFS -Compress
+Format-Volume -DriveLetter X -FileSystem exFAT
+
+# Full wipe and then format
+Format-Volume -DriveLetter X -FileSystem NTFS -Compress -Full -Force
+
+--------------------------------
+# DRIVE LETTER
+
+# Map a network share to drive Z:
+New-PSDrive -Name Z -PSProvider FileSystem -Root \\Server\Share -Persist
