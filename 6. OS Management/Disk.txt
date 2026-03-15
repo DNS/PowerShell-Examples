@@ -1,0 +1,2 @@
+Get-Command | Select-String 'disk|volume|partition'
+
