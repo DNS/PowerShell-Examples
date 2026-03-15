@@ -1,8 +1,9 @@
-Get-Command | Select-String 'disk|volume|partition'
+Get-Command | Select-String 'disk|volume|partition|psdrive'
 
 Get-Disk
 Get-Partition
 Get-Volume
+Get-PSDrive
 
 -----------------------------
 # FORMAT DRIVE
