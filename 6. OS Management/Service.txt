@@ -1,3 +1,5 @@
+Get-Command | Select-String '-service'
+
 Get-Service
 
 New-Service -Name "AAA123" -BinaryPathName 'C:\Path\myservice.exe arg1 arg2'
