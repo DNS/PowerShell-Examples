@@ -1,18 +1,21 @@
 Get-Command | Select-String '-service'
 
+# create windows service
+New-Service -Name "MyService123" -BinaryPathName 'C:\Path\myservice.exe arg1 arg2'
+New-Service -Name "MyService123" -BinaryPathName '"C:\Path with Space\myservice.exe" arg1 arg2'
+
+# remove windows service
+Remove-Service -Name "MyService123"
+
 Get-Service
-
-New-Service -Name "AAA123" -BinaryPathName 'C:\Path\myservice.exe arg1 arg2'
-New-Service -Name "AAA123" -BinaryPathName '"C:\Path with Space\myservice.exe" arg1 arg2'
-
 Set-Service
-
 Start-Service
 Stop-Service
 Restart-Service
 Resume-Service
 Suspend-Service
+Remove-Service
 
-Remove-Service -Name "AAA123"
+
 
 
