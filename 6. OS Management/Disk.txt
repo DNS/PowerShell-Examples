@@ -1,4 +1,4 @@
-Get-Command | Select-String 'disk|volume|partition|psdrive'
+Get-Command | Select-String '-(disk|volume|partition|psdrive)'
 
 Get-Disk
 Get-Partition
