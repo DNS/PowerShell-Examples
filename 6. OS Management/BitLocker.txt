@@ -1,4 +1,6 @@
-﻿# Unlock a volume
+Get-Command | Select-String 'bitlocker'
+
+# Unlock a volume
 $SecureString = ConvertTo-SecureString 'MyPassword123' -AsPlainText -Force
 Unlock-BitLocker -MountPoint "D:" -Password $SecureString
 
