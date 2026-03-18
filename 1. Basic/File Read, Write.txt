@@ -14,13 +14,14 @@ Get-Content file1.txt, file2.txt | Add-Content file5.txt
 
 # read per line
 1..1000 | %{ $_ >> test.txt }
-Get-Content .\test.txt       | % { $_  + ' !' }
+Get-Content .\test.txt | % { $_  + ' !' }
 
 # read every 5 lines
 Get-Content .\test.txt -ReadCount 5 | %{ $_ + ' !' }
 
 # read whole files
-Get-Content .\test.txt -Raw  | % { $_  + ' !' }
+Get-Content .\test.txt -Raw | % { $_  + ' !' }
+Get-Content .\test.txt -ReadCount 0 | %{ $_ + ' !' }
 
 #########################
 
