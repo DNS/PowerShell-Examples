@@ -12,6 +12,16 @@ New-Item file.txt
 Get-Content file1.txt, file2.txt | Set-Content file4.txt
 Get-Content file1.txt, file2.txt | Add-Content file5.txt
 
+
+#########################
+
+# read text
+Get-Content .\file.txt
+
+# read binary
+Get-Content .\file.exe -AsByteStream
+
+
 # read per line
 1..1000 | %{ $_ >> test.txt }
 Get-Content .\test.txt | % { $_  + ' !' }
@@ -22,6 +32,9 @@ Get-Content .\test.txt -ReadCount 5 | %{ $_ + ' !' }
 # read whole files
 Get-Content .\test.txt -Raw | % { $_  + ' !' }
 Get-Content .\test.txt -ReadCount 0 | %{ $_ + ' !' }
+
+# read buffer for large files
+Get-Content .\large-file.bin -AsByteStream -OutBuffer 50MB
 
 #########################
 
