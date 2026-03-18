@@ -12,8 +12,15 @@ New-Item file.txt
 Get-Content file1.txt, file2.txt | Set-Content file4.txt
 Get-Content file1.txt, file2.txt | Add-Content file5.txt
 
-Get-Content .\file.txt       | % { '>>> FIRST ' + $_ }
-Get-Content .\file.txt -Raw  | % { '>>> FIRST ' + $_ }
+# read per line
+1..1000 | %{ $_ >> test.txt }
+Get-Content .\test.txt       | % { $_  + ' !' }
+
+# read every 5 lines
+Get-Content .\test.txt -ReadCount 5 | %{ $_ + ' !' }
+
+# read whole files
+Get-Content .\test.txt -Raw  | % { $_  + ' !' }
 
 #########################
 
