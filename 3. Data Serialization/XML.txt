@@ -32,3 +32,15 @@ $obj = [PSCustomObject]@{
 $obj
 $obj | ConvertTo-CliXml
 
+
+-------------------
+
+# RSS reader
+[xml] $feed = iwr https://mediaindonesia.com/feed/all | % Content
+$feed.rss.channel.item
+
+
+
+
+
+
