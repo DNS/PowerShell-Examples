@@ -37,7 +37,10 @@ $obj | ConvertTo-CliXml
 
 # RSS reader
 [xml] $feed = iwr https://mediaindonesia.com/feed/all | % Content
-$feed.rss.channel.item
+$feed.rss.channel.item.title.'#cdata-section'
+$feed.rss.channel.item.description.'#cdata-section'
+$feed.rss.channel.item.link
+$feed.rss.channel.item.pubDate
 
 
 
