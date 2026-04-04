@@ -4,6 +4,7 @@ for ($i=0; $i -lt $a.Length; $i++) { $a[$i] }
 
 # ForEach-Object
 $a = @(1..5)
+$a = 1..5    # same as above
 foreach ($i in $a) { 'Counting ' + $i }
 $a | foreach { 'Counting ' + $_ }
 $a | % { 'Counting ' + $_ }
