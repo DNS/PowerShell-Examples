@@ -25,8 +25,9 @@ Get-Process | Where-Object ProcessName -Like 'svchost'
 Get-Process | ? ProcessName -Like 'svchost'
 Get-Process | ? { $_.ProcessName -like 'svchost' }
 
+Get-Process | ? ProcessName -Like 'svchost' | Select-Object Id, CPU
 
-1..10 | where {$_ -le 5 }
+1..10 | where { $_ -le 5 }
 
 
 Get-Process | ? ProcessName -like 'firefox' | Stop-Process
