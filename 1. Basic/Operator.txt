@@ -1,4 +1,32 @@
-﻿
+# Arithmetics operator
++
+-
+*
+/
+%
+
+
+################################
+
+# String operator
++
+*
+
+# + string concatenation
+'Hello ' + 'World'
+
+# * string multiplier
+# print 'A' 100 million times
+'A' * 100e+6
+# print: Hello 5 times
+'Hello ' * 5
+
+
+
+
+################################
+
+
 # case insensitive
 -and
 -or
