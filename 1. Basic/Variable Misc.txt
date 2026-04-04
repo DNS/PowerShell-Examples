@@ -1,4 +1,6 @@
-# Declare $var and fill it 100 million times with 'A'
-$var = 'A' * 100e+6
+# print 'A' 100 million times
+'A' * 100e+6
 
+# print: Hello 5 times
+'Hello ' * 5
 
