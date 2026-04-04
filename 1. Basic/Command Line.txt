@@ -1,7 +1,7 @@
-# Inline statement: from PowerShell
+# Inline statement: from terminal
 pwsh -Command { Write-Output $(3/5)  }
 
-# Inline statement: from Command Prompt
+# Inline statement: from terminal
 pwsh -Command "& { Write-Output $(3/5) }"
 pwsh -Command "Invoke-Expression \"Write-Output $(3/5)\" "
 
