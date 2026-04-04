@@ -1,4 +1,4 @@
 # Declare $var and fill it 100 million times with 'A'
-$var = 'A' * 100+e6
+$var = 'A' * 100e+6
 
 
