@@ -1,0 +1,13 @@
+# Auto Elevate Script
+
+
+# Check if the script is running with elevated privileges
+if (-not ([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)) {
+    # If not, restart the script with elevated privileges
+    $scriptPath = $PSCommandPath
+    Start-Process -FilePath "powershell.exe" -ArgumentList "-NoProfile -ExecutionPolicy Bypass -File `"$scriptPath`"" -Verb RunAs
+    exit
+}
+
+# Your script content here
+Write-Host "The script is running with elevated privileges."
