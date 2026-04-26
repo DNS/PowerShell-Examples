@@ -1,5 +1,5 @@
 <#
-Script-Pipe.ps1 — Accept values passed from pipelines or arguments
+Script-Pipe-Arg.ps1 — Accept values passed from pipelines or arguments
 
 Example:
 'John', 'Adam' | Script-Pipe.ps1
@@ -15,8 +15,8 @@ Param(
 
 Begin {
 	$usage = @'
-
-Script-Pipe.ps1 — Accept values passed from pipelines or arguments
+	
+Script-Pipe-Arg.ps1 — Accept values passed from pipelines or arguments
 
 Example:
 'John', 'Adam' | Script-Pipe.ps1
