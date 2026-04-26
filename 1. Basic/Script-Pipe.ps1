@@ -1,5 +1,4 @@
 <#
-
 Script-Pipe.ps1 — Accept values passed from pipelines or arguments
 
 Example:
@@ -14,7 +13,22 @@ Param(
 )
 
 
-Begin {}
+Begin {
+	$usage = @'
+
+Script-Pipe.ps1 — Accept values passed from pipelines or arguments
+
+Example:
+'John', 'Adam' | Script-Pipe.ps1
+Script-Pipe.ps1 'Obito', 'Madara'
+
+'@
+	if ($Help) {
+		$usage
+		exit
+	}
+
+}
 
 Process {
 	$InputObject | % { 'Hello: ' + $_ }
