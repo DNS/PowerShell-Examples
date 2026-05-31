@@ -18,4 +18,5 @@ Start-Process notepad.exe -Wait
 # start process - window
 Start-Process notepad.exe [-WindowStyle {Normal | Hidden | Minimized | Maximized}]
 
-
+# open directory in file explorer
+Get-Process firefox | Split-Path | Invoke-Item
