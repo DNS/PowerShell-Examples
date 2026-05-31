@@ -20,7 +20,7 @@ Script-Pipe-Arg.ps1 — Accept values passed from pipelines or arguments
 
 Example:
 'John', 'Adam' | Script-Pipe.ps1
-Script-Pipe.ps1 'Obito', 'Madara'
+Script-Pipe.ps1 'John' 'Adam'
 
 '@
 	if ($Help) {
