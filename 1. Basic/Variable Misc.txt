@@ -4,3 +4,6 @@
 # print: Hello 5 times
 'Hello ' * 5
 
+# initialize/fill $var1 with 'A' with 500mb size
+$var1 = 'A' * 500mb
+$var1
