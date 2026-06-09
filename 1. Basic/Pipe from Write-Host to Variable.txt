@@ -1,2 +1,7 @@
-$captured = Write-Host 'hello' 6>&1
-Write-Output $captured
+$captured1 = Write-Host 'hello' 6>&1
+Write-Output $captured1
+
+
+Write-Host 'world' 6>&1 | Tee-Object -Variable captured2
+Write-Output $captured2
+
