@@ -1,0 +1,2 @@
+$captured = Write-Host 'hello' 6>&1
+Write-Output $captured
