@@ -1,0 +1,4 @@
+# Unblocks files that were downloaded from the internet
+
+Unblock-File file.exe
+
