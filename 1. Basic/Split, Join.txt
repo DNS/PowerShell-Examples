@@ -1,4 +1,5 @@
 'hello;world' -split ';'
+'hello', 'world' -join ' and '
 
 # -split and -join can accept Regex
 'a1c' -split '\d'
