@@ -25,7 +25,7 @@ bbb
 ccc
 '@ -split "`r`n"
 
-# works on both (windows terminal & .ps1 script)
+# using regex to find CR, works on both (windows terminal & .ps1 script)
 @'
 aaa
 bbb
