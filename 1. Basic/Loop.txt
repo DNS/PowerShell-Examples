@@ -14,6 +14,10 @@ $a | % { 'Counting ' + $_ }
 $a | foreach { 'Counting ' + $_ }
 $a | % { 'Counting ' + $_ }
 
+# $_ same as $PSItem
+1..5 | % { "hello $_" }
+1..5 | % { "hello $PSItem" }
+
 # Loop Hash Table
 foreach ($i in $h.Keys) { $i + ' : ' + $h.$i }
 foreach ($i in $h.GetEnumerator()) { $i.Name + ' : ' + $i.Value }
