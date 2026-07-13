@@ -1,0 +1,34 @@
+'hello;world' -split ';'
+
+# -split and -join can accept Regex
+'a1c' -split '\d'
+
+
+-------------------------------
+
+Interactive ConsoleHost input has LF (newline) only line endings, whereas files in 
+Windows have CRLF (carriage return and newline). Hence why splitting only on LF works 
+in the shell but not in a .ps1 on Windows. 
+
+# works on windows terminal but not in .ps1 script
+@'
+aaa
+bbb
+ccc
+' -split "`n"
+
+# works on both (windows terminal & .ps1 script)
+@'
+aaa
+bbb
+ccc
+' -split "`r`n"
+
+# works on both (windows terminal & .ps1 script)
+@'
+aaa
+bbb
+ccc
+' -split '\r?\n'
+
+
