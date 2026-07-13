@@ -16,20 +16,20 @@ in the shell but not in a .ps1 on Windows.
 aaa
 bbb
 ccc
-' -split "`n"
+'@ -split "`n"
 
 # works on both (windows terminal & .ps1 script)
 @'
 aaa
 bbb
 ccc
-' -split "`r`n"
+'@ -split "`r`n"
 
 # works on both (windows terminal & .ps1 script)
 @'
 aaa
 bbb
 ccc
-' -split '\r?\n'
+'@ -split '\r?\n'
 
 
