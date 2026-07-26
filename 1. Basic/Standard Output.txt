@@ -26,6 +26,11 @@ Out-Host		  	doesn't return value
 $Host.UI.Write()	doesn't return value
 [Console]::Write()	doesn't return value
 
+# Differences between Write-Host vs Out-Host
+Write-Host : Displaying messages, debugging, color support
+Out-Host   : Displaying and paginating output
+
+
 $a = Write-Output 'Hello World'
 $a
 
