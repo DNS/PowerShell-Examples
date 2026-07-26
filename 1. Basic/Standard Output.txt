@@ -1,11 +1,13 @@
 ﻿
-# STDOUT
+# STDOUT with return value to variable/function/pipeline
 Write-Output 'Hello World'
 'Hello World'
 "Hello World"
 12345
 
+# STDOUT witout returning value
 Write-Host 'Hello World'
+Out-Host 'Hello World'
 
 $Host.UI.Write('Hello World')
 $Host.UI.WriteLine('Hello World')
@@ -20,6 +22,7 @@ Write-Output 'لا شيء واقع مطلق بل كل ممكن'
 # Differences:
 Write-Output		return value to variable/function/pipeline
 Write-Host			doesn't return value
+Out-Host		  	doesn't return value
 $Host.UI.Write()	doesn't return value
 [Console]::Write()	doesn't return value
 
