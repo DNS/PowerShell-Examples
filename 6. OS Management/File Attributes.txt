@@ -1,0 +1,3 @@
+# set file attributes to Hidden
+$f = Get-Item 'filename.txt'
+$f.Attributes = $f.Attributes -bor 'Hidden'
