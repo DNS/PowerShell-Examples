@@ -34,7 +34,7 @@ $var = -join("Hello", " ", "world");
 
 
 
-# Concatenation (Faster)
+# Faster Concatenation for large strings
 $a = [System.Text.StringBuilder]::new()
 [void] $a.Append('aaa')
 $a.Append('bbb') > $null
