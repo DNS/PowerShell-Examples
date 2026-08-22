@@ -36,7 +36,8 @@ $var = -join("Hello", " ", "world");
 
 # Concatenation (Faster)
 $a = [System.Text.StringBuilder]::new()
-$a.Append('aaa') > $null
+[void] $a.Append('aaa')
+$a.Append('bbb') > $null
 $a.ToString()
 
 # find string in files or variables
