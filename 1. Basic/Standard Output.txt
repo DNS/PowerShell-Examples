@@ -78,10 +78,10 @@ Write-Output "hello"
 Clear-Host	CLS, CLEAR
 
 # Suppressing return values
-[void] $a
-$null = $a
-$a | Out-Null
-$a > $null
+[void] 'hello'
+$null = 'hello'
+'hello' | Out-Null
+'hello' > $null
 
 
 # Set Font Color
