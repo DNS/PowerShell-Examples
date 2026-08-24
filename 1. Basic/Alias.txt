@@ -3,7 +3,7 @@ alias
 
 # example
 Get-Alias | Out-String | Select-String cls
-Get-Alias | select -Property DisplayName | Out-String | Select-String cls
+Get-Alias | Select-Object -Property DisplayName | Out-String | Select-String cls
 
 
 DisplayName
