@@ -1,4 +1,8 @@
 Get-Alias 
+alias
+
+# example
+alias | Out-String | sls cls
 
 
 CommandType     Name                                               Version    Source
