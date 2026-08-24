@@ -2,7 +2,7 @@ Get-Alias
 alias
 
 # example
-alias | Out-String | sls cls
+Get-Alias | Out-String | Select-String cls
 
 
 CommandType     Name                                               Version    Source
