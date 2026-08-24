@@ -45,6 +45,10 @@ $array | Select-String 'MyPattern'
 $array | Select-String -Path "Users\*.csv" -Pattern '\\b[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}\b' | Select-Object -First 10
 
 
+# convert object to string
+$obj = Get-Alias
+$obj | Out-String | Select-String cls
+
 
 
 
