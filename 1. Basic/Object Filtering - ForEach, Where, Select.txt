@@ -3,6 +3,10 @@ foreach -> ForEach-Object -> % {  }
 select  -> Select-Object 
 where   -> Where-Object   -> ? {  }
 
+
+1..5 | % { if ($_ -gt 3) {$_} }
+1..5 | ? { $_ -gt 3 }
+
 ----------------------
 
 # ForEach-Object or % (similar to foreach loops in other languages)
