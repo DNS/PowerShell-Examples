@@ -1,4 +1,4 @@
-# Auto Elevate Script
+# Auto Elevate
 # run as administrator
 
 # Check if the script is running with elevated privileges
