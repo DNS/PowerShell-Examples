@@ -29,6 +29,10 @@ Get-Content .\test.txt | % { $_  + ' !' }
 # read every 5 lines
 Get-Content .\test.txt -ReadCount 5 | %{ $_ + ' !' }
 
+# read by specifying delimiter, default: "`n"
+'aaa%%bbb%%' | Out-File .\test.txt
+Get-Content .\test.txt -Delimiter '%%' | %{ $_ + '!' }
+
 # read whole files
 Get-Content .\test.txt -Raw | % { $_  + ' !' }
 Get-Content .\test.txt -ReadCount 0 | %{ $_ + ' !' }
