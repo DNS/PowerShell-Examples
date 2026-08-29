@@ -8,5 +8,10 @@ $var2 = Get-Content 'large-files.txt' -Raw
 Clear-Variable -Name var1
 Remove-Variable -Name var* -Scope Global
 
+# using $null
+$a = 'This is very long string ...'
+$a = $null
+[System.GC]::Collect()
+
 # Force .NET garbage collection to free up unused memory
 [System.GC]::Collect()
