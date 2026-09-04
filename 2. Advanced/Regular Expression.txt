@@ -1,6 +1,4 @@
-﻿
-
-# Equality
+# String comparison operator
 -eq, -ieq, -ceq - equals
 -ne, -ine, -cne - not equals
 -gt, -igt, -cgt - greater than
