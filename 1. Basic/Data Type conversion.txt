@@ -1,13 +1,16 @@
-$a = Format-Hex -InputObject 0x1f40
-$a
+[int] '546'
+[int] 'hello'		# fatal error
+'hello' -as [int]	# soft error
+
+
+
+Format-Hex -InputObject 0x1f40
 
 # Hexadecimal String to Integer
-[uint16] $b = '0x1f40'
-$b
+[uint16] '0x1f40'
 
-
+# ascii
 $a = [char] 65 + [char] 66
 $a
-
 $s = Out-String -InputObject $a
-
+$s
