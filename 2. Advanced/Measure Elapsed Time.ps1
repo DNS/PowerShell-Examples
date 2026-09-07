@@ -1,6 +1,6 @@
 # using Measure-Command
 Measure-Command {
-	Start-Sleep -Seconds 5
+	Start-Sleep -Seconds 2
 }
 
 
