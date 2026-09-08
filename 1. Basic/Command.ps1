@@ -25,6 +25,10 @@ Get-Command -Type ExternalScript
 # get all available applications
 Get-Command -Type Application
 
+# get all commands from specific modules
+Install-Module -Name PSSQLite -Force
+Get-Command -Module PSSQLite
+
 
 
 
