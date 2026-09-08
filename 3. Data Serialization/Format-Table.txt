@@ -2,5 +2,11 @@ Format-Table -AutoSize
 Format-Table -Wrap
 ft
 
+# set to very long width (to avoid wrapping)
+Get-Process | select * | Format-Table | Out-String -Width 4096
+
+
+-------------------------------
+
 Format-List
 fl
