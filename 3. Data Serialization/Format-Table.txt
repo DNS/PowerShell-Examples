@@ -1,4 +1,6 @@
-﻿Format-Table -AutoSize
+Format-Table -AutoSize
 Format-Table -Wrap
+ft
 
 Format-List
+fl
