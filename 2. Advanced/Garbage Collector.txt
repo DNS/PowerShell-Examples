@@ -17,3 +17,5 @@ $a = $null
 # Force .NET garbage collection to free up unused memory
 # need to call 3 times before it freed the RAM
 [System.GC]::Collect()
+[System.GC]::GetTotalMemory($true) | Out-Null
+[System.GC]::GetTotalMemory(‘forcefullcollection’) | Out-Null
