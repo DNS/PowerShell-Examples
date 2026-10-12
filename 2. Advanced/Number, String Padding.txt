@@ -1,8 +1,10 @@
-
-
 # If the value is a string, you can pad it with zeroes:
 '26'.PadLeft(4, '0')
+> 0026
+
+'26'.PadRight(4, '0')
+> 2600
 
 # If the value is numeric you can format it as a string:
 (26).ToString('0000')
-
+> 0026
