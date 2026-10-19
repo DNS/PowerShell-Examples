@@ -71,6 +71,7 @@ $a.Content | Set-Content -Path 'test2.exe' -AsByteStream
 
 # doesn't works, output is not binary
 $a.Content > test3.exe
+$a.Content | Out-File test3.exe
 
 
 ---------------------------
